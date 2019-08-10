@@ -1,6 +1,3 @@
-In the last two months, I have been working on a project which I used GraphQL to send data to the client-side. So I thought of writing a post on how I did this.
-GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
-You can read more about GraphQL here
 So let us get to implementing it in your flask project.
 # Setting up your project
 First lets setup your flask projects. Create a directory
