@@ -179,6 +179,7 @@ To be able to create posts and users you’ll need mutations. So let's add that 
         create_post = CreatePost.Field()
     schema = graphene.Schema(query=Query, mutation=Mutation)
 Now, let's add a new post with GraphQL mutations:
+
     mutation {
       createPost(username:"johndoe", title:"Hello 2", body:"Hello body 2"){
         post{
