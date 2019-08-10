@@ -157,6 +157,7 @@ Now if you navigate to 127.0.0.1:5000/graphql you’ll see the GraphQLi view. Wr
 ## Mutations
 
 To be able to create posts and users you’ll need mutations. So let's add that to our app.
+
     ...
     # Schema Objects
     ...
