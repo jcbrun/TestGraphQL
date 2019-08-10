@@ -4,16 +4,21 @@ You can read more about GraphQL here
 So let us get to implementing it in your flask project.
 # Setting up your project
 First lets setup your flask projects. Create a directory
+
     $ mkdir flask-graphql-project
     $ cd flask-graphql-project
 Now create a virtual environment. This helps keep your project dependencies in one place by giving you a custom python installation. If you don’t have it installed already, install it.
+
     $ pip install virtualenv
 Now create a virtual environment for your project and activate the virtualenv.
+
     $ virtualenv venv
     $ source venv/bin/activate
 This creates a virtual environment inside your project folder. Then install your project dependencies.
+
     $ pip install flask flask-graphql flask-migrate flask-sqlalchemy graphene graphene-sqlalchemy
 Now create an app.py file in your folder root directory. Add the following code to the file
+
     # Imports
     from flask import Flask
     # app initialization
