@@ -44,6 +44,7 @@ Now from the terminal run python app.py runserver this will set up a debug serve
 # Adding a database
 Now, let's add a database to our application. We’re going to be using Sqlalchemy to create our DB models and SQLite for our demo DB.
 Add the following code to app.py file.
+
     # Imports
     ...
     from flask_sqlalchemy import SQLAlchemy
@@ -58,6 +59,7 @@ Add the following code to app.py file.
     db = SQLAlchemy(app)
     ...
 Now let's create our models. Add the following code to app.py:
+
     ...
     # Models
     class User(db.Model):
@@ -78,6 +80,7 @@ Now let's create our models. Add the following code to app.py:
             return '<Post %r>' % self.title
 ...
 In the code above we created two models Posts and User and created a relationship between the two. Now let's create some demo data.
+
     $ python
     >>> from app import db, User, Post
     >>> db.create_all()
@@ -98,6 +101,7 @@ Now let’s get to business.
 ## Schemas
 GraphQL presents your objects to the world as a graph structure rather than a more hierarchical structure to which you may be accustomed. So we need to show which type of object will be shown in the graph. That’s where schemas come in. Schemas are used to describe your data. So let's create a schema for our models.
 Add the following content to app.py:
+
     # Imports
     ...
     import graphene
@@ -119,6 +123,7 @@ Add the following content to app.py:
     schema = graphene.Schema(query=Query)
     ...
 Now add the route to check out our GraphQL interface
+
     # Imports
     ...
     from flask_graphql import GraphQLView
@@ -135,6 +140,7 @@ Now add the route to check out our GraphQL interface
     )
     ...
 Now if you navigate to 127.0.0.1:5000/graphql you’ll see the GraphQLi view. Write your GraphQL query
+
     {
       allPosts{
         edges{
@@ -149,6 +155,7 @@ Now if you navigate to 127.0.0.1:5000/graphql you’ll see the GraphQLi view. Wr
       }
     }
 ## Mutations
+
 To be able to create posts and users you’ll need mutations. So let's add that to our app.
     ...
     # Schema Objects
